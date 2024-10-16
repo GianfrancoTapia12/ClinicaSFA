@@ -1,0 +1,1 @@
+let currentIndex=0;const items=document.querySelectorAll(".carousel-item"),totalItems=items.length;function showCurrentImage(){const e=100*-currentIndex;document.querySelector(".carousel").style.transform=`translateX(${e}%)`}function nextImage(){currentIndex=(currentIndex+1)%totalItems,showCurrentImage()}setInterval(nextImage,4e3),showCurrentImage();

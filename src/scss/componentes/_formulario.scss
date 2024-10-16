@@ -1,0 +1,45 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario{
+    margin-top: 5rem;
+    width: 100%;
+}
+
+.formulario-citas{
+    width: 100%;
+    max-width: 500px;         /* Ancho máximo del formulario */
+    background-color: #fff;   /* Color de fondo opcional */
+    padding: 2rem;            /* Espaciado interno */
+    border-radius: 1rem;      /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra opcional */
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+    //align-items: center;
+    flex-direction: column;   /* Alinea el label y el input en columna ELIMINAR SI CAUSA PROBLEMAS*/
+    label{
+        //flex: 0 0 10rem;
+        margin-bottom: 0.5rem;    /* Espaciado entre el label y el input */
+    }
+    input{
+        //flex: 1;
+        //border: none;
+        //padding: calc(v.$separacion/4);
+        //border-radius: 1rem;
+
+        padding: 0.8rem;
+        border-radius: 0.5rem;
+        border: 1px solid #ccc;
+        width: 100%;              /* Asegura que el input ocupe todo el ancho disponible */
+
+        &:disabled{
+            background-color: lighten(v.$negro, 30%);
+            color: v.$negro;
+            cursor: not-allowed;
+        }
+    }
+}
+
